@@ -8,9 +8,7 @@ RUN apt-get update
 RUN apt-get install -y curl wget git
 
 RUN curl -L https://get.rvm.io | bash -s stable
-RUN /bin/bash -c "source /usr/local/rvm/scripts/rvm"
-RUN rvm install 2.3.1
-RUN rvm use 2.3.1 --default
+RUN /bin/bash -c "source /usr/local/rvm/scripts/rvm ; rvm install 2.3.1 ; rvm use 2.3.1 --default"
 RUN apt-get install -y rubygems-integration
 RUN gem install sass
 
