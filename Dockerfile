@@ -1,5 +1,4 @@
 # Container for developing Sass/Scss at Holberton School
-
 FROM holbertonschool/base-ubuntu-1404
 MAINTAINER Guillaume Salva <guillaume@holbertonschool.com>
 
@@ -18,8 +17,8 @@ RUN apt-get install -y --force-yes ruby2.3 ruby2.3-dev
 
 RUN gem install sass
 
-ADD run.sh /tmp/run.sh
-RUN chmod u+x /tmp/run.sh
+ADD run.sh /etc/sandbox_run.sh
+RUN chmod u+x /etc/sandbox_run.sh
 
 # start run!
-CMD ["./tmp/run.sh"]
+CMD ["./etc/sandbox_run.sh"]
